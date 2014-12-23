@@ -1,0 +1,4 @@
+SPFlatten
+=========
+
+Flatten SPF records
