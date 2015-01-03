@@ -1,15 +1,14 @@
 #!/usr/bin/env python
+import re, dns.resolver
 
-#---------------------------------------------------
+#-----------------------------------------------------
 # SPFlattener - Because who needs limits??
 # Requires: dnspython
-#---------------------------------------------------
-
+# Usage: edit the "root_domain" variable below and run
+#-----------------------------------------------------
 # To-do:
 #     Confirm that SPF doesn't follow CNAMES (I don't think it does)
 #     Should we consider Sender ID? ie spf2.0 (probably not)
-
-import re, dns.resolver
 
 #---------------------------------
 root_domain = "google.com"
