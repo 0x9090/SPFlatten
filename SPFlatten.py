@@ -2,7 +2,6 @@
 
 #---------------------------------------------------
 # SPFlattener - Because who needs limits??
-# Created by: alawrence (at) hubspot (dot) com
 # Requires: dnspython
 #---------------------------------------------------
 
