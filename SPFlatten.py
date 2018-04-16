@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+from __future__ import print_function
 import re, dns.resolver
 
 #-----------------------------------------------------
@@ -28,7 +29,7 @@ def main():
       spf_nonflat_mechanisms= []
       spf_ip_list= []
 
-      print(f' #### SPF for {root_domain} ####')
+      print("#### SPF for %s ####" % root_domain)
 
       flatten_spf(root_domain)
 
