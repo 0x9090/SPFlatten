@@ -70,7 +70,6 @@ def flatten_spf(domain):
 
 # Parse the given mechansim, and dispatch it accordintly
 def parse_mechanism(mechanism, domain):
-   print(mechanism)
    if re.match(r'^a$', mechanism):
       convert_domain_to_ipv4(domain)
    elif re.match(r'^mx$', mechanism):
