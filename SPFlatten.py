@@ -47,7 +47,7 @@ def main():
 
         flatten_spf(root_domain)
 
-        dedupe_spf_ip_list = list(set(spf_ip_list))
+        dedupe_spf_ip_list = uniq(spf_ip_list)
 
         flat_spf = "v=spf1"
         for ip in dedupe_spf_ip_list:
@@ -62,6 +62,15 @@ def main():
         flat_spf += all_mechanism
 
         print("#### Flattened SPF for %s ####\n----------------------\n%s\n" % (root_domain, flat_spf))
+
+
+# remove duplicates from list while preserving ordering
+def uniq(in_list):
+    out_list = []
+    for elem in in_list:
+        if elem not in out_list:
+            out_list.append(elem)
+    return out_list
 
 
 # Recursively flatten the SPF record for the specified domain
